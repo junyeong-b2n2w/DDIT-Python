@@ -1,0 +1,16 @@
+.metadata/.lock
+.metadata/
+JAVA/.classpath
+JAVA/.project
+JAVA/.settings/org.eclipse.jdt.core.prefs
+JAVA/bin/Animal.class
+JAVA/bin/
+.recommenders/caches/identified-project-coordinates.json
+.recommenders/caches/manual-mappings.json
+JAVASCRIPT/.project
+JAVASCRIPT/.settings/
+PYTHON/.project
+PYTHON/.pydevproject
+Servers/
+RemoteSystemsTempFiles/.project
+JAVASCRIPT/.classpath
