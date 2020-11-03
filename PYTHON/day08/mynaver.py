@@ -23,7 +23,7 @@ if(rescode==200):
 else:
     print("Error Code:" + rescode)
 
-soup = BeautifulSoup(response_body, 'lxml')
+soup = BeautifulSoup(response_body, 'xml')
 
 my_items = soup.find_all('item')
 
