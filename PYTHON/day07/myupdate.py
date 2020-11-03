@@ -9,3 +9,5 @@ sql = "update mytable set col02='up1', col03='up1' where col01=3"
 cur.execute(sql)
 
 con.commit()
+
+con.close()

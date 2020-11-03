@@ -9,3 +9,4 @@ sql = "delete from mytable where col01=3"
 cur.execute(sql)
 
 con.commit()
+con.close()

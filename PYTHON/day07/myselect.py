@@ -11,5 +11,5 @@ cur.execute(sql)
 for i in cur:
     print(i)
     
-    
+con.close()
     
