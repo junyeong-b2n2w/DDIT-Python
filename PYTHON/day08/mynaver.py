@@ -6,8 +6,8 @@ import pymysql
 from bs4 import BeautifulSoup
 
 q = input("검색어 입력 >")
-client_id = "rX_L_G9st7EbCVN81nrm"
-client_secret = "dAoD5Xbg_m"
+client_id = "client_id"
+client_secret = "client_secret"
 encText = urllib.parse.quote(q)
 #url = "https://openapi.naver.com/v1/search/blog?query=" + encText # json 결과
 url = "https://openapi.naver.com/v1/search/blog.xml?query=" + encText # xml 결과

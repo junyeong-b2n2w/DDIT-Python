@@ -6,11 +6,11 @@ import telegram
 url = "https://www.jinsimdak.com/home/product/detail.php?prdcode=G1000000326"
 
 
-token = '1239560340:AAG90oSiaRuVzy56MUM_2dRpL9iEQuWFGzI'
+token = 'MY_TOKEN'
 
 bot = telegram.Bot(token=token)
 
-chat_id = '1489946579'
+chat_id = 'MYChatID'
 
 num = 0;
 while True:
@@ -40,13 +40,3 @@ while True:
         pass
     
     
-   
-
-
-
-
-
-
-
-
-
