@@ -19,6 +19,8 @@ my_titles = soup.find_all('tr')
 for title in my_titles:
     titles = title.find_all('td')
     print(titles[0].text , "  // " , titles[1].text)
+    
+    
 
 
 
