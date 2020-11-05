@@ -24,7 +24,7 @@ sql = "Insert into stock (cname, ccode, price, gtime) values (%s,%s,%s,%s )"
 
 while(True):
     
-    time.sleep(1)
+    time.sleep(60)
     response = requests.get(url, headers=headers)
     response.encoding = 'utf-8'
     
