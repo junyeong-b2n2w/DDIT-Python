@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TETRIS</title>
+
+<style>
+	#block{
+		top:100px;
+		left:100px;
+		position:absolute;
+		width:50px;
+		height:50px;
+		background: yellow
+	}
+</style>
+</head>
+<body>
+<div id="block">
+	가나다
+</div>
+
+<script>
+document.onkeydown = checkKey;
+
+ele = document.getElementById("block")
+
+ele.style.top= "100px"
+ele.style.left= "100px"
+
+console.log(parseInt("3000px",10))
+
+function checkKey(e) {
+
+	
+	
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up arrow
+        console.log(e.keyCode)
+        ele = document.getElementById("block")
+        console.log(ele)
+        ele.style.top= (parseInt(ele.style.top||0, 10) - 10) + "px" 
+        console.log(ele.style.top)
+    }
+    else if (e.keyCode == '40') {
+        // down arrow
+        console.log(e.keyCode)
+        
+        ele = document.getElementById("block")
+        console.log(ele)
+        ele.style.top= (parseInt(ele.style.top||0, 10) + 10) + "px" 
+        console.log(ele.style.top)
+    }
+    else if (e.keyCode == '37') {
+       // left arrow
+       console.log(e.keyCode)
+       
+       ele = document.getElementById("block")
+       console.log(ele)
+       ele.style.left= (parseInt(ele.style.left||0, 10) - 10) + "px" 
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       console.log(e.keyCode)
+       
+       ele = document.getElementById("block")
+       console.log(ele)
+       ele.style.left = (parseInt(ele.style.left||0, 10) + 10) + "px" 
+    }
+
+}
+</script>
+</body>
+</html>
