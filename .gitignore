@@ -16,3 +16,5 @@ RemoteSystemsTempFiles/.project
 JAVASCRIPT/.classpath
 PYTHON/day08/debug.log
 /.recommenders/
+PYTHON/day16/__pycache__/pygame.cpython-37.pyc
+*.pyc
