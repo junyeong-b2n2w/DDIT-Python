@@ -50,10 +50,70 @@
 					mylistrender();
 				}
 				
+				if(messages[0] == "disp"){
+					if(messages[1] == ""){
+						return;
+					}
+					var idx = getIdxByUsername(messages[1]);
+					myCanvasRender(idx,messages[2]);
+				}
+				
+				
 			}
 		});
 
 	});
+	
+	function myCanvasRender(idx,data){
+		var canvases	= document.getElementsByClassName("canvases");
+
+		var datas = data.split(",");
+		var canvas = canvases[idx];
+		if (canvas.getContext) {
+			var ctx = canvas.getContext("2d");
+
+			for(var i=0;i<23;i++){
+				for(var j=0;j<10;j++){
+					var seq = i*10 + j;
+					if(datas[seq] == 0) 	ctx.fillStyle = "rgba(255, 255, 255, 0.5)";	
+					
+					if(datas[seq] == 1) 	ctx.fillStyle = "rgba(255, 0, 0, 0.5)";	
+					if(datas[seq] == 2) 	ctx.fillStyle = "rgba(245, 0, 0, 0.5)";	
+					if(datas[seq] == 3) 	ctx.fillStyle = "rgba(235, 0, 0, 0.5)";	
+					if(datas[seq] == 4) 	ctx.fillStyle = "rgba(225, 0, 0, 0.5)";	
+					if(datas[seq] == 5) 	ctx.fillStyle = "rgba(215, 0, 0, 0.5)";	
+					if(datas[seq] == 6) 	ctx.fillStyle = "rgba(205, 0, 0, 0.5)";	
+					if(datas[seq] == 7) 	ctx.fillStyle = "rgba(195, 0, 0, 0.5)";	
+					
+					if(datas[seq] == 11) 	ctx.fillStyle = "rgba(0, 0, 255, 0.5)";	
+					if(datas[seq] == 12) 	ctx.fillStyle = "rgba(0, 0, 245, 0.5)";	
+					if(datas[seq] == 13) 	ctx.fillStyle = "rgba(0, 0, 235, 0.5)";	
+					if(datas[seq] == 14) 	ctx.fillStyle = "rgba(0, 0, 225, 0.5)";	
+					if(datas[seq] == 15) 	ctx.fillStyle = "rgba(0, 0, 215, 0.5)";	
+					if(datas[seq] == 16) 	ctx.fillStyle = "rgba(0, 0, 205, 0.5)";	
+					if(datas[seq] == 17) 	ctx.fillStyle = "rgba(0, 0, 195, 0.5)";	
+					
+					ctx.fillRect (5*j, 5*i, 4, 4);				
+				}
+			}
+
+		}
+		
+		
+		
+	}
+	
+	
+	function getIdxByUsername(ko_name){
+		var idx = -1;
+		for(var i=0;i<list_attend.length;i++){
+			if(list_attend[i].username == ko_name){
+				idx = i;
+				break;
+			}
+		}
+		return idx;
+	}
 	
 	function merge_username(p_username){
 		var idx = -1;
@@ -331,9 +391,9 @@ function mytypeCode(keyCode){
 	
 	setPrint2DByBlockStack();
 	myrender();
-	console.log(block2D)
-	console.log(stack2D)
-	console.log(print2D)
+// 	console.log(block2D)
+// 	console.log(stack2D)
+// 	console.log(print2D)
 }
 
 function remove10(){
@@ -620,39 +680,39 @@ td{
 		
 <table>
 	<tr>
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
 	</tr>
 	<tr>
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td>  
 	</tr>
 	<tr>
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
 	</tr>
 	<tr>
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td>  
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td>  
 	</tr>
 	<tr>
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
-		<td> <div class="names" >__</div><canvas width="100px" height="150px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
+		<td> <div class="names" >__</div><canvas width="50px" height="115px" class="canvases" /> </td> 
 	</tr>				
 
 </table>
